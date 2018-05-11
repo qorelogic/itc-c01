@@ -6,5 +6,6 @@ from rest_framework.reverse import reverse
 def api_root(request, format=None):
     return Response({
        'users': reverse('users:user-list', request=request, format=format),
-       #'todos': reverse('todos:todo-list', request=request, format=format), # boilerplate example2
+       'person': reverse('person:person-list', request=request, format=format),
+       'movie': reverse('movie:movie-list', request=request, format=format),
     })
