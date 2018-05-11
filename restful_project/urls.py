@@ -18,7 +18,11 @@ from django.urls import path
 from django.conf.urls import url, include
 from rest_framework.documentation import include_docs_urls
 
+from restful_project import views
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^docs/', include_docs_urls(title='Todo API', description='Restful API for Todo')),
+    
+    url(r'^$', views.api_root),
 ]
