@@ -26,4 +26,6 @@ urlpatterns = [
     
     url(r'^$', views.api_root),
     url(r'^', include(('users.urls', 'users'), namespace='users')),
+    url(r'^', include(('person.urls', 'person'), namespace='person')),
+    url(r'^', include(('movie.urls', 'movie'), namespace='movie')),
 ]
