@@ -3,11 +3,11 @@
 virtualenv --python=/usr/bin/python3 venv
 . venv/bin/activate
 
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
-python manage.py makemigrations person movie
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
+python3 manage.py makemigrations users person movie
+python3 manage.py migrate
+python3 manage.py createsuperuser
+python3 manage.py runserver
 
 deactivate
