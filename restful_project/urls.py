@@ -22,7 +22,7 @@ from restful_project import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url(r'^docs/', include_docs_urls(title='Todo API', description='Restful API for Todo')),
+    url(r'^docs/', include_docs_urls(title='Movies API', description='Restful API for Movies by Jeff Kiiza')),
     
     url(r'^$', views.api_root),
     url(r'^', include(('users.urls', 'users'), namespace='users')),

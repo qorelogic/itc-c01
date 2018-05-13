@@ -8,9 +8,10 @@ class PersonSerializer(serializers.HyperlinkedModelSerializer):
  
     class Meta:
         model = Person
-        fields = ('url', 'id', 'created', 'name', 'user')
+        #fields = ('url', 'id', 'created', 'user', 'firstName', 'lastName', 'aliases', 'moviesAsActorActress', 'moviesAsDirector', 'moviesAsProducer')
+        fields = ('url', 'created', 'user', 'firstName', 'lastName', 'aliases', 'moviesAsActorActress', 'moviesAsDirector', 'moviesAsProducer')
         extra_kwargs = {
             'url': {
-                'view_name': 'person:todo-detail',
+                'view_name': 'person:person-detail',
             }
         }
