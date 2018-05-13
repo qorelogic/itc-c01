@@ -5,6 +5,11 @@ from users.models import User
  
  
 class UserSerializer(serializers.HyperlinkedModelSerializer):
+    person = serializers.HyperlinkedRelatedField(
+        many=True,
+        view_name='person:person-detail',
+        read_only=True
+    )
     password = serializers.CharField(write_only=True)
  
     def create(self, validated_data):
@@ -28,7 +33,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('url', 'id', 'username',
                   'password', 'first_name', 'last_name',
-                  'email'
+                  'email', 'person'
                   )
         extra_kwargs = {
             'url': {
