@@ -5,7 +5,7 @@ virtualenv --python=/usr/bin/python3 venv
 
 pip install -r requirements.txt
 
-python manage.py makemigrations todos users
+python manage.py makemigrations person movie
 python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
